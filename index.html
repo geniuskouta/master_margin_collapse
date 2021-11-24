@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin-collapse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .card {
+        display: block;
+        border-radius: 10px;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+        display: block;
+        max-width: 200px;
+        margin: 20px auto 0;
+        background-color: #f5f5f5;
+        padding: 12px;
+    }
+
+    .card-with-border {
+        border: 1px solid #0984e3;
+    }
+</style>
+<body>
+    <article>
+        <h1>margin collapse</h1>
+        <section>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mastering margin collapse</a>
+        </section>
+    </article>
+
+    <div class="card card-with-border">
+        <div class="card-content">
+            margin-top stays within the parent
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            margin-top goes beyond the parent
+        </div>
+    </div>
+</body>
+</html>
